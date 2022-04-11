@@ -20,7 +20,7 @@ function filtroBuscarNome() {
     const input = document.querySelector('.campoBuscaPorNome');
 
     const listaProduto = produtos.filter((produto) => {
-        const nomeProduto = produto.nome.toLowerCase().replace('ç', 'c').replace('ã', 'a');
+        const nomeProduto = produto.nome.toLowerCase();
         const categoriaProduto = produto.categoria.toLowerCase();
         const secaoProduto = produto.secao.toLowerCase();
         

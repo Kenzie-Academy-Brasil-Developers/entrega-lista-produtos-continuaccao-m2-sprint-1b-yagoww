@@ -1,39 +1,36 @@
-//! --------------------- CARRINHO ----------------------------------
 const contCarrinho = document.querySelector('.containerCarrinho ul');
+let addCarrinho = [];
+
 const precoTotal = document.getElementById("precoTotal");
 const somaPreco = [];
 let soma = [];
-
-
-function addCarrinho(listaProdutosCar) {
+//! ------------ Carrinho ------------
+function montarCarrinho () {
     contCarrinho.innerHTML = '';
 
-    listaProdutosCar.forEach((produto) => {
-
-    const li = document.createElement('li');
-    const imgCar = document.createElement('img');
-    const nomeCar = document.createElement('span');
-    const precoCar = document.createElement('p');
-    const secaoCar = document.createElement('p');
+    addCarrinho.forEach((produto) => {
+        const li = document.createElement('li');
+        const imgCar = document.createElement('img');
+        const nomeCar = document.createElement('span');
+        const precoCar = document.createElement('p');
+        const secaoCar = document.createElement('p');
 
         imgCar.src = produto.img;
-        img.alt = produto.nome;
         nomeCar.innerText = produto.nome;
         precoCar.innerText = produto.preco;
         secaoCar.innerText = produto.secao;
 
-
+        
         li.append(imgCar, nomeCar, precoCar, secaoCar);
         contCarrinho.append(li);
-        ul.appendChild(li)
-
-    })
+        
+    somaPreco.push(Number(preco));
+    precoTotal.innerText = somandoPreco(somaPreco);
+}); 
+    btnCarrinho.addEventListener('click', addCarrinho);
 }
 
-
-btnCarrinho.addEventListener('click', addCarrinho)
-
-
+//! ------------ Preço ------------
 function somandoPreco(array) {
     soma = 0;
     for (let i = 0; i < array.length; i++) {
@@ -41,4 +38,3 @@ function somandoPreco(array) {
     }
     return soma;
 }
-

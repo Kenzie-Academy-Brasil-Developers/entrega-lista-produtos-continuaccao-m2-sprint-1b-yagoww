@@ -34,7 +34,7 @@ function montarListaProdutos(listaProdutos) {
         li.append(img, h3, p, span, ol, btnCarrinho);
         ul.appendChild(li);
 
-
     });
+
 }
 montarListaProdutos(produtos);
